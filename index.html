@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Chocolats Solidaires</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Dashboard - Chocolats Solidaires</h1>
+    <a href="./contribue">Entrer un nouvel achat</a>
+    <table id="Benef"></table>
+    <p id="p">Charge</p>
+    <script>
+      async function int(){
+const response = await fetch("./contributeurs.json");
+            alert(coucou)
+            // 2. Extraction des données JSON (indispensable)
+            const cont = await response.json(); 
+      var benefi = " <tr>
+    <th>Nom</th>
+    <th>Quantité</th>
+    <th>Bénéfice</th>
+  </tr>";
+      // Version moderne avec fonction fléchée :
+      cont.forEach((element, index) => {
+        benefi += `<tr><td> ${element.nom}</td><td>${element.boites}</td><td>${element.prix}</td></tr> `
+      });
+
+       document.getElementById("Benef").innerHtml = benefi}
+      int();
+    </script>
+  </body>
+</html>

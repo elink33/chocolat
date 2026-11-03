@@ -13,7 +13,7 @@
     <script>
       async function int(){
 const response = await fetch("./contributeurs.json");
-            alert(coucou)
+            alert("coucou")
             // 2. Extraction des données JSON (indispensable)
             const cont = await response.json(); 
       var benefi = " <tr>
@@ -26,7 +26,7 @@ const response = await fetch("./contributeurs.json");
         benefi += `<tr><td> ${element.nom}</td><td>${element.boites}</td><td>${element.prix}</td></tr> `
       });
 
-       document.getElementById("Benef").innerHtml = benefi}
+       document.getElementById("Benef").innerHTML = benefi}
       int();
     </script>
   </body>

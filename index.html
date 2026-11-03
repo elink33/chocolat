@@ -21,12 +21,12 @@ const response = await fetch("./contributeurs.json");
     <th>Quantité</th>
     <th>Bénéfice</th>
   </tr>";
-      // Version moderne avec fonction fléchée :
       cont.forEach((element, index) => {
         benefi += `<tr><td> ${element.nom}</td><td>${element.boites}</td><td>${element.prix}</td></tr> `
       });
 
-       document.getElementById("Benef").innerHTML = benefi}
+       document.getElementById("Benef").innerHTML = benefi;
+      }
       int();
     </script>
   </body>
